@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<link href="css/bootstrap_player.css" rel="stylesheet" type="text/css">
+<!--widget social media-->
+<link href="css/icomoon.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<title>Bootstrap audio player UI</title>
+</head>
+
+<body>
+
+    <nav id="bt-player" class="top navbar"> 
+        <div class="container">
+            <div class="row">
+                <div class="meta">
+                    <div class="col-xs-9 col-sm-4 col-md-4 ui-column">
+                        <div class="ui-btn play">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        
+                        <img class="cover" src="https://i1.sndcdn.com/artworks-000129138473-r7y1br-t300x300.jpg">
+
+                        <div class="ui-label"></div>
+
+                    </div>
+                                            
+                    <div id="timer" class="col-xs-3 col-sm-1 col-md-1 ui-timer">
+                        <span class="playtime">0:00</span> <span>/</span> <span class="tracktime">0:00</span>
+                    </div>
+                    
+                </div>    
+                    <div id="slider" class="col-xs-10 col-sm-5 col-md-5 ui-slider">
+                        <div class="ui-seekbar">
+                            <div class="ui-progress" style="width:0%;"></div>
+                            <div class="ui-slider-handle" style="left:0%;"></div>
+                        </div>
+                    </div>
+                    <div class="ui-btn col-xs-2 col-sm-2 col-md-2">
+                        <i id="like" class="fa fa-heart "></i>
+                        <i id="share" class="fa fa-share-alt"></i>
+                        <i id="volume" class="fa fa-volume-up separator"></i>
+                    </div>
+                
+
+            </div>
+        </div>
+
+    </nav>
+    <audio id="audiooutput" >Przykro, ale nie masz obsługi HTML5</audio>
+    
+  <div style="position: relative;left: 50%;top: 300px; float:left;" id="log"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-audioplayer.js" ></script>
+<script>
+    $('#bt-player').audioPlayer({
+        autoplay: false,
+        label: 'Calvin Harris & Disciples - How Deep Is Your Love (Elysium & WildVibes Remix)',
+        coverSrc: 'https://i1.sndcdn.com/artworks-000129138473-r7y1br-t300x300.jpg',
+        src: "http://webbooster.pl/123.mp3"
+    });
+</script>
+</body>
+</html>
